@@ -730,9 +730,9 @@ function createPossibleMove(col, row) {
     //console.log(`${col}${row}`)
     let tile = document.querySelector(`#${col}${row}`)
 
-    //if (tile.dataset.occupied == "true") {
-        //currentPossibleMove.style.backgroundColor = "red"
-    //}
+    if (tile.dataset.occupied == "true") {
+        currentPossibleMove.style.backgroundColor = "red"
+    }
     tile.appendChild(currentPossibleMove)
 }
 
@@ -817,26 +817,6 @@ function createAllPossibleMoves(piece) {
 }
 
 
-function createAllPossibleMoves2(piece) {
-    playerMovesList.forEach((move) => {
-        if (piece.dataset.type != "King") {
-            createPossibleMove(move[0], move[1])
-        }
-        else {
-            getAllEnemyMoves(piece)
-            let exists = false;
-            for (let i = 0; i < enemyMovesList.length; i++) {
-                if (move[0] == enemyMovesList[i][0] && move[1] == enemyMovesList[i][1]) {
-                    exists = true;
-                    break;
-                }
-            }
-            if (!exists) {
-                createPossibleMove(move[0], move[1])
-            }
-        }
-    })
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
