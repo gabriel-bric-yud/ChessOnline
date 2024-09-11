@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+    <title>Chess Online</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width,  initial-scale=1">
+    <script type="application/javascript" src="/socket.io/socket.io.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur" rel="stylesheet">
+    <link rel =  "stylesheet" href = "style.css">
+</head>
+
+<body>
+    
+    <div class = "app">
+        <div class = "titleDiv">
+            <a href = "https://jolly-meadow-0b380d910.5.azurestaticapps.net">CHESS ONLINE</a>
+        </div>
+
+        <div id = "gameContainer">
+            <div id="gameboard">    
+            </div>
+
+            <div class = "hide resultNotif" >
+                <h3 id = "resultTxt"></h3>
+                <p id = "rematchHeader">Rematch?</p>
+                <div class = "btnDiv">
+                    <button type = "button" id = "accept" class = "matchButton">Accept &#10004</button>
+                    <button type = "button" id = "reject" class = "matchButton">Reject &#10006</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id = "userInterface"> 
+            
+
+
+            <div id = "interface" >
+                <fieldset>
+                    <legend>Multiplayer</legend>
+                    <div id = "createAccountUI">
+                        <form id = 'userCreate'>
+                            <input type = "text" id = "nameValue" name = "nameValue" maxlength="14">
+                            <input type = "submit" id = "createUser" name = "enterName" value = "Create Username">
+                        </form>
+                    </div>
+                    <div id ="searchFriendDiv" class = "hide">
+                        <form id = 'searchFriendForm'>
+                            <input type = "text" id = "friend" name = "friend" maxlength="14">
+                            <input type = "submit" id = "searchUser" value = "Send Invite" style = "border-radius: 20px;">
+                        </form>
+                    </div>
+
+                    <div id = 'playersOnline'>
+                    </div>
+
+                </fieldset>
+
+                <div id = "singlePlayer">  
+                    <fieldset>
+                        <legend>Singleplayer</legend>
+
+
+                        <button id = "startBtn" class = "playerButton" type="button">Start Game</button>
+
+                        <div id = "optionsContainer">
+                            <!--<fieldset>-->
+                                <legend>Player Color:</legend>
+                                <select name = "colorSelect" id = "selectColor" style = "border-radius: 20px;"> 
+                                    <option value ="" disabled>Select your starting color <!--&#9964--></option>
+                                    <option value ="white" selected>White</option>
+                                    <option value ="black">Black</option>
+                                </select>
+                            <!--</fieldset>-->
+                        </div>
+
+                    <!--<fieldset> -->
+                        <legend>Board Colors:</legend>
+                        <select name = "boardDecor" id = "boardDecor" style = "border-radius: 20px;"> 
+                            <option value ="" disabled>Select Board Style <!--&#9964--></option>
+                            <option value ="wood">Wood</option>
+                            <option value ="darkolivegreen" selected>Olive Green</option>
+                            <option value ="indigo">Indigo</option>
+                            <option value ="blueviolet">Violet</option>
+                            <option value ="crimson">Crimson</option>
+                            <option value ="darkred">Red</option>
+                            <option value ="rainbow">Rainbow</option>
+                        </select>
+                    <!--</fieldset> -->
+                    </fieldset>
+                </div>  
+
+            </div>
+
+        </div>     
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
