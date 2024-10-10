@@ -17,8 +17,8 @@ app.set('port', port);
 app.use(express.static(__dirname));
 
 app.all('*', function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Origin', 'https://chessonline.azurewebsites.net/'); //*
+    res.header('Access-Control-Allow-Methods', 'GET, POST');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
