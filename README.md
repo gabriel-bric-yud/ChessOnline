@@ -6,4 +6,4 @@ Game logic and UI was built with vanilla Javascript, HTML and CSS. Includes cust
 
 Server and websockets were built using ExpressJS and Socket.IO.
 
-Hosted on Azure Cloud. Try it here: https://chessonline.azurewebsites.net
+Hosted on Azure Cloud. Try it here: https://chessonline.azurewebsites.net  (wait for to Azure load from cold start)
