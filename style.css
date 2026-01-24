@@ -113,6 +113,8 @@ body {
     grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px;
     grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px;
     justify-content: center;
+    min-width: fit-content;
+    min-height: fit-content;
     */
     justify-content: space-evenly;
     justify-self: center;
@@ -121,8 +123,7 @@ body {
     box-shadow: -2px -2px 63px 10px rgba(0,0,0,0.75);
     width: calc(var(--tileSize) * 8);
     height: calc(var(--tileSize) * 8);
-    min-width: fit-content;
-    min-height: fit-content;
+
     background-color: darkred;
 
 }
